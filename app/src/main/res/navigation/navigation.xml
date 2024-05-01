@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/navigation"
+    app:startDestination="@id/main_fragment">
+
+    <fragment
+        android:id="@+id/main_fragment"
+        android:name="com.devartdgo.testapp.fragment.ListFragment"
+        android:label="Dog Breeds List">
+        <action
+            android:id="@+id/action_home_to_image"
+            app:destination="@id/image_fragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/image_fragment"
+        android:name="com.devartdgo.testapp.fragment.DogImageFragment"
+        android:label="Dog Image"
+        >
+        <argument
+            android:name="doog_breed"
+            app:argType="string" />
+    </fragment>
+</navigation>
